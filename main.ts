@@ -1,0 +1,22 @@
+input.onButtonPressed(Button.A, function () {
+    servos.P0.setAngle(0)
+    basic.pause(2000)
+    servos.P2.setAngle(90)
+    basic.pause(2000)
+    pins.servoWritePin(AnalogPin.P4, 30)
+    basic.pause(5000)
+    pins.servoWritePin(AnalogPin.P4, 100)
+    basic.pause(2000)
+})
+input.onButtonPressed(Button.AB, function () {
+    pins.servoWritePin(AnalogPin.P4, 30)
+    basic.pause(3000)
+    pins.servoWritePin(AnalogPin.P4, 96)
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showString("Err")
+    servos.P0.setAngle(90)
+    servos.P1.setAngle(90)
+    servos.P2.setAngle(90)
+    pins.servoWritePin(AnalogPin.P4, 90)
+})
